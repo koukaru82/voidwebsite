@@ -1,0 +1,164 @@
+/* 全体の基本設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff; /* 背景を白 */
+    color: #000; /* 全体の文字色を黒 */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ヘッダーセクション */
+header {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+/* ナビゲーション設定 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #000; /* ナビゲーションリンクを黒文字 */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* メインセクションの基本設定 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 各セクションのスタイル */
+#void-section, #textarea-section {
+    max-width: none; /* 制限を解除 */
+    width: 100%; /* 親要素が制約しないよう調整 */
+    margin: 0 auto;
+}
+
+/* ボタンのスタイル（統一） */
+.btn-download, button {
+    display: inline-block;
+    background-color: #444;       /* 背景色を濃いグレーに設定 */
+    color: #fff;                  /* 白文字 */
+    border: 2px solid #fff;       /* 白のボーダー */
+    padding: 12px 40px;           /* 内側余白を調整 */
+    font-size: 1.1rem;            /* フォントサイズを少し大きく */
+    font-family: Arial, sans-serif; /* ボタン用のフォント */
+    cursor: pointer;              /* カーソルをポインタに設定 */
+    margin: 2rem auto;            /* 上下の中央揃え */
+    border-radius: 15px;          /* 丸みを追加 */
+    text-align: center;           /* テキストを中央揃え */
+    text-transform: uppercase;    /* テキストを大文字に変換 */
+    letter-spacing: 1px;          /* 文字間のスペースを広げる */
+    transition: all 0.3s ease;    /* すべての変化にスムーズなトランジションを適用 */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* 軽い影を追加 */
+    text-decoration: none;        /* 下線を削除（aタグ用） */
+}
+
+.btn-download:hover, button:hover {
+    background-color: #fff;       /* ホバー時に背景を白に */
+    color: #000;                  /* ホバー時の文字色を黒に */
+    transform: scale(1.05);       /* ホバー時に少し大きくする */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* 影を強調 */
+}
+
+.btn-download:active, button:active {
+    transform: scale(0.98);       /* クリック時に少し縮小 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 影を縮小 */
+}
+
+/* フッターのスタイル */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+}
+
+/* レスポンシブ対応のスタイル */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    #textarea-section textarea {
+        width: 90%; /* タブレットでは画面幅の90% */
+        height: 140px;
+    }
+
+    .btn-download, button {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    #textarea-section textarea {
+        width: 100%; /* スマートフォンでは全幅 */
+        height: 120px; /* 高さをさらに縮小 */
+        font-size: 0.9rem;
+    }
+
+    .btn-download, button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}

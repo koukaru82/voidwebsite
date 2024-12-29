@@ -1,0 +1,150 @@
+/* style.css */
+
+/* 全体の基本設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff; /* 背景を黒 */
+    color: #000; /* 全体の文字色を白 */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ヘッダーセクション */
+header {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+/* ナビゲーション設定 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #000; /* ナビゲーションリンクを白文字 */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* メインセクションの基本設定 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 各セクションのスタイル */
+#void-section, #textarea-section {
+    max-width: none; /* 制限を解除 */
+    width: 100%; /* 親要素が制約しないよう調整 */
+    margin: 0 auto;
+}
+
+/* ダウンロードボタンのスタイル */
+.btn-download {
+    display: inline-block;
+    background-color: #ccc; /* 常に淡い灰色 */
+    color: #000; /* ボタンの文字色を黒 */
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #aaa; /* 枠線を淡い灰色に */
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.btn-download:hover {
+    background-color: #ccc; /* ホバー時も変化なし */
+    color: #000; /* 文字色も変化なし */
+}
+
+/* フッターのスタイル */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+}
+
+/* レスポンシブ対応のスタイル */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    #textarea-section textarea {
+        width: 90%; /* タブレットでは画面幅の90% */
+        height: 140px;
+    }
+
+    .btn-download {
+        padding: 0.4rem 0.8rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    #textarea-section textarea {
+        width: 100%; /* スマートフォンでは全幅 */
+        height: 120px; /* 高さをさらに縮小 */
+        font-size: 0.9rem; /* フォントサイズを調整 */
+    }
+
+    .btn-download {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}

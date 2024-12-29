@@ -1,0 +1,34 @@
+/* 全画面の設定 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 全画面コンテナ */
+#fullscreen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* テキストエリア */
+#fullscreen-textarea {
+    width: 90%;
+    height: 90%;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 1rem;
+    font-size: 1rem;
+    resize: none;
+    box-sizing: border-box;
+}

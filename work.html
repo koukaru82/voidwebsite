@@ -1,0 +1,132 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- メタ情報: ページの基本情報 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Void.txt - Explore the emptiness and ephemerality of digital space.">
+        <meta name="keywords" content="Void, Minimal, Philosophy, Art, Kosuke Karube, Conceptual Art, Digital Art">
+        <meta name="author" content="Kosuke Karube">
+    
+        <!-- Open Graph（SNS共有用メタタグ） -->
+        <meta property="og:title" content="Void.txt">
+        <meta property="og:description" content="Explore the emptiness and ephemerality of digital space.">
+        <!-- url 挿入 -->
+         <meta property="og:image" content="https://yourwebsite.com/favicon-512x512.webp">
+        <meta property="og:url" content="https://yourwebsite.com">
+
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Void.txt">
+        <meta name="twitter:description" content="Explore the emptiness and ephemerality of digital space.">
+        <meta name="twitter:image" content="/favicon-512x512.webp">
+        <link rel="icon" href="/favicon-32x32.webp" sizes="32x32" type="image/webp">
+        <link rel="icon" href="/favicon-512x512.webp" sizes="512x512" type="image/webp">
+    <title>Drawing - Void.txt</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        /* Drawingページ専用のスタイル */
+        .gallery {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .gallery .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自動調整 */
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery .grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc; /* 軽い枠線 */
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery .grid img:hover {
+            transform: scale(1.05); /* ホバー時に拡大 */
+        }
+
+        .concept, .projects {
+            text-align: center;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .concept h2, .projects h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .concept p, .projects p {
+            font-size: 1rem;
+        }
+
+        .projects a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .projects a:hover {
+            color: #003399;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Void.txt</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="work.html" class="active">Work</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- サムネイルギャラリー -->
+        <section class="gallery">
+            <h2>Drawing Portfolio</h2>
+            <div class="grid">
+                <a href="work/drawing/mura.html"><img src="work/drawing/thum/murat.avif" alt="mura"loading="lazy"></a>
+                <a href="work/drawing/qr.html"><img src="work/drawing/thum/qrt.avif" alt="QR"loading="lazy"></a>
+                <a href="work/drawing/sikaku.html"><img src="work/drawing/thum/sikakut.avif" alt="sikaku"loading="lazy"></a>
+                <a href="work/drawing/shadow.html"><img src="work/drawing/thum/shadowt.avif" alt="shadow"loading="lazy"></a>
+                <a href="work/drawing/tometo.html"><img src="work/drawing/thum/tometot.avif" alt="tometo"loading="lazy"></a>
+            </div>
+        </section>
+
+        <!-- コンセプトセクション -->
+        <section class="concept">
+            <h2>Concept</h2>
+            <p>
+               Be simple, Be minimal, Be conceptual.
+            </p>
+        </section>
+
+        <!-- プロジェクトリンク -->
+        <section class="projects">
+            <h2>Related Projects</h2>
+            <p><a href="work/project/project-re.html">Project Re</a></p>
+            <p><a href="work/project/project-v.html">Project V</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; From 2025 Kosuke KARUBE All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

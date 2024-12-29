@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Void.txt - Explore the emptiness and ephemerality of digital space.">
+    <meta name="keywords" content="Void, Minimal, Philosophy, Art">
+    <title>Void.txt</title>
+    <link rel="stylesheet" href="css/destination.css">
+    <style>
+        /* 影のシミュレーション */
+        #void-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0,0,0,0.8), black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        #void-section:hover {
+            background: radial-gradient(circle, rgba(0,0,0,0.5), black);
+            transition: background 1s ease-in-out;
+        }
+
+        .shadow-effect {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        /* ダウンロードボタンの追加効果 */
+        .btn-download {
+            display: inline-block;
+            background-color: #ccc;
+            color: #000;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: skewX(-20deg);
+            transition: left 0.5s;
+        }
+
+        .btn-download:hover::before {
+            left: 100%;
+        }
+
+        #thank-you {
+            display: none;
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .btn-download:active + #thank-you {
+            display: block;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Void.txt ダウンロードセクション -->
+        <section id="void-section">
+            <h2>What did you feel within the void?</h2>
+            <p>Didn't you sense something, alongside the anxiety? Now, Void is yours.</p>
+            <p>Please download the file and write down your thoughts. This file will not be shared.</p>
+
+            <!-- ダウンロードボタン -->
+            <a href="void.txt" download class="btn-download">Download Void.txt</a>
+            <div id="thank-you">Void is now yours.</div>
+
+            <!-- マウス追従の影エフェクト -->
+            <div class="shadow-effect" id="shadow"></div>
+        </section>
+    </main>
+
+    <script>
+        // マウス追従エフェクト
+        const shadow = document.getElementById('shadow');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            shadow.style.left = `${x - 100}px`;
+            shadow.style.top = `${y - 100}px`;
+        });
+    </script>
+
+    <!-- フッターセクション -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
