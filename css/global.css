@@ -15,7 +15,6 @@ header {
     padding: 10px 0;       /* 内側余白を設定 */
     margin: 0 auto; /* コンテンツを中央揃え */
     text-align: center; /* タイトルを中央揃え */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* 下部に影を追加 */
     padding: 20px 0; /* ヘッダーの余白を統一 */
     box-sizing: border-box;   /* パディングを含めたサイズ計算 */
 }
@@ -28,34 +27,60 @@ header {
 /* モバイル対応 */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* モバイル画面で表示 */
+        display: block;
         cursor: pointer;
         font-size: 24px;
+        position: absolute; /* 左端に固定 */
+        left: 10px; /* 左からの余白 */
+        top: 10px; /* 上からの余白 */
+        z-index: 1000; /* 他の要素より前面に表示 */
     }
+    
 
     .nav-menu {
         display: none;
     }
 
-    #menu-toggle:checked + .nav-menu {
-        display: block;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        background: #444;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .nav-menu ul li {
-        margin: 10px 0;
-    }
-
-    .nav-menu ul li a {
-        font-size: 18px;
-    }
+  /* 展開時の背景を黒にし、メニューを中央に表示 */
+#menu-toggle:checked + .nav-menu {
+    display: flex; /* 中央配置にするためflexboxを使用 */
+    flex-direction: column; /* 縦並び */
+    justify-content: center; /* 縦方向に中央揃え */
+    align-items: center; /* 横方向に中央揃え */
+    position: fixed; /* 背景全体を覆う */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* 背景を黒に */
+    z-index: 999; /* 前面に表示 */
 }
+
+/* メニュー項目のスタイル */
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-menu ul li {
+    margin: 15px 0; /* 各メニューの間隔 */
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white; /* テキストを白に */
+    font-size: 24px; /* テキストサイズを大きく */
+    font-weight: bold;
+    transition: color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+/* ホバー時に色を変更 */
+.nav-menu ul li a:hover {
+    color: gray; /* ホバー時にグレーに変化 */
+}
+
 
 ul {
     margin: 0;
