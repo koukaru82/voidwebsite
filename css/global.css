@@ -37,41 +37,47 @@ header {
     }
     
 
-    .nav-menu {
-        display: none;
-    }
-
-  /* 展開時の背景を黒にし、メニューを中央に表示 */
-#menu-toggle:checked + .nav-menu {
-    display: flex; /* 中央配置にするためflexboxを使用 */
-    flex-direction: column; /* 縦並び */
-    justify-content: center; /* 縦方向に中央揃え */
-    align-items: center; /* 横方向に中央揃え */
-    position: fixed; /* 背景全体を覆う */
+    /* 基本スタイル */
+.nav-menu {
+    position: fixed; /* 画面に固定 */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* 背景を黒に */
-    z-index: 999; /* 前面に表示 */
+    background: #444;
+    display: none; /* 初期状態で非表示 */
+    z-index: 9999; /* 他の要素より前面に */
+}
+
+  /* 展開時の背景を黒にし、メニューを中央に表示 */
+  #menu-toggle:checked + .nav-menu {
+    display: block; /* チェック時に表示 */
+}
+
+body.no-scroll {
+    overflow: hidden; /* スクロール禁止 */
 }
 
 /* メニュー項目のスタイル */
 .nav-menu ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
-    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* 縦方向に中央揃え */
 }
 
 .nav-menu ul li {
-    margin: 15px 0; /* 各メニューの間隔 */
+    margin: 20px 0; /* 各メニュー間のスペース */
 }
 
 .nav-menu ul li a {
+    color: white;
+    font-size: 24px;
     text-decoration: none;
-    color: white; /* テキストを白に */
-    font-size: 24px; /* テキストサイズを大きく */
     font-weight: bold;
     transition: color 0.3s ease; /* ホバー時のアニメーション */
 }
