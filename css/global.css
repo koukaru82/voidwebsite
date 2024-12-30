@@ -20,6 +20,43 @@ header {
     box-sizing: border-box;   /* パディングを含めたサイズ計算 */
 }
 
+/* 基本スタイル */
+.menu-icon {
+    display: none; /* デフォルトで非表示 */
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* モバイル画面で表示 */
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    #menu-toggle:checked + .nav-menu {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        background: #444;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .nav-menu ul li a {
+        font-size: 18px;
+    }
+}
+
 ul {
     margin: 0;
     padding: 0;
