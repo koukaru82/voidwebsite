@@ -30,10 +30,10 @@ header {
         display: block;
         cursor: pointer;
         font-size: 24px;
-        position: absolute; /* 左端に固定 */
+        position: fixed; /* 左端に固定 */
         left: 10px; /* 左からの余白 */
         top: 10px; /* 上からの余白 */
-        z-index: 1000; /* 他の要素より前面に表示 */
+        z-index: 1001; /* 他の要素より前面に表示 */
     }
     
 
@@ -47,6 +47,18 @@ header {
     background: #444;
     display: none; /* 初期状態で非表示 */
     z-index: 9999; /* 他の要素より前面に */
+}
+
+#menu-toggle:checked + .nav-menu {
+    display: block;
+}
+body.menu-open {
+    overflow: hidden;
+}
+
+
+#menu-toggle:checked + .menu-icon {
+    position: fixed; /* メニュー開閉時も固定 */
 }
 
   /* 展開時の背景を黒にし、メニューを中央に表示 */
@@ -84,7 +96,12 @@ body.no-scroll {
 
 /* ホバー時に色を変更 */
 .nav-menu ul li a:hover {
-    color: gray; /* ホバー時にグレーに変化 */
+    color: rgb(0, 0, 0); /* ホバー時にグレーに変化 */
+}
+
+/* メニューが開いたときにスクロールを無効化 */
+body.menu-open {
+    overflow: hidden;
 }
 
 
