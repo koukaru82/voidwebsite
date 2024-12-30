@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /file/void.txt
+Disallow: /void.txt
+Disallow: /voidness.html
+Disallow: /void.html
+Disallow: /destination.html
