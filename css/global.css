@@ -55,6 +55,15 @@ header h1 {
     }
 }
 
+@media (min-width: 2560px) {
+    header {
+        height: 120px; /* ヘッダーの高さを調整 */
+    }
+    main {
+        padding: 40px; /* コンテンツ周りの余白を調整 */
+    }
+}
+
 /* PCサイズ以上でメニューアイコンを非表示 */
 @media (min-width: 769px) {
     .menu-icon {
@@ -162,6 +171,13 @@ body.menu-open {
     margin: 10px 0;
 }
 
+.centered-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+
 .nav-menu ul li a:hover {
     color: #aaa;
 }
@@ -201,15 +217,35 @@ button:active {
 /* ---------------------------------- */
 /* コンテンツ全体のスタイル */
 main {
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 20px;
     flex: 1;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
+
+@media (min-width: 2560px) {
+    body {
+        margin-top: 120px; /* 80pxから120pxに増加 */
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        margin-top: 50px; /* 大画面ではさらに縮める */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 70px; /* スマホサイズでは少し余白を広げる */
+    }
+}
+
 
 /* ---------------------------------- */
 /* フッター */
@@ -333,7 +369,7 @@ ul li {
 
 /* ヘッダーによる本文の隠れを防ぐための余白設定 */
 body {
-    margin-top: 80px; /* ヘッダーの高さ分の余白を確保 */
+    margin-top: 30px; /* ヘッダーの高さ分の余白を確保 */
 }
 
 /* ヘッダーの固定位置や透明度設定 */
