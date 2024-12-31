@@ -23,6 +23,11 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
+  <loc>https://voidtxt.com/article</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
   <loc>https://voidtxt.com/news</loc>
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
