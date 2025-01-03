@@ -5,77 +5,62 @@
 <url>
   <loc>https://voidtxt.com/</loc>
   <priority>1.0</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/about</loc>
   <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/profile</loc>
   <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work</loc>
   <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/article</loc>
   <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/news</loc>
   <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/contact</loc>
   <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/drawing/mura</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/drawing/qr</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/drawing/sikaku</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/drawing/shadow</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/drawing/tometo</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/project/project-re</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/project/project-v</loc>
   <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>https://voidtxt.com/work/drawing/work.html</loc>
   <priority>0.6</priority>
-  <changefreq>monthly</changefreq>
 </url>
 
 </urlset>
