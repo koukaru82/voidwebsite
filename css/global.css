@@ -382,3 +382,16 @@ header {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.9); /* 必要に応じて背景透明度を調整 */
 }
+  
+  textarea:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  textarea {
+    height: 70%; /* 高さを明示 */
+    background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
